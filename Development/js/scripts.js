@@ -8,22 +8,35 @@
  */
 
 function greet(name) {
-  if (greet != name) {
-    console.log("Hello");
-  } else {
-    console.log("hello" + name);
+  let message = "Hello ";
+  if (name) {
+    //   message = message + name;
+    message += name;
   }
+  //   } else {
+  console.log(message);
 }
 
+greet();
+greet("Leena");
 /*
  * isOdd(n) اسم الدالة
  * - n تستقبل رقم
  * - عدا ذلك false إن كان الرقم فردياً وترجع true ترجع القيمة
  */
 function isOdd(n) {
-  if (n % 2 == 0) {
-    console.log("true");
+  if (n % 2 == 1) {
+    // console.log("true");
+    return true;
   } else {
-    console.log("false");
+    return false;
+    // console.log("false");
   }
 }
+
+function check(n) {
+  return !!(n % 2);
+}
+console.log(check(3));
+
+console.log(isOdd(6));
